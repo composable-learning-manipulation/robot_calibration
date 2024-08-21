@@ -259,7 +259,7 @@ bool ChainManager::waitToSettle()
       for (size_t j = 0; j < state.name.size(); ++j)
       {
         // Is this joint even a concern?
-        if (fabs(state.velocity[j]) < 0.001)
+        if (fabs(state.velocity[j]) < 0.01)
           continue;
 
         for (size_t i = 0; i < controllers_.size(); ++i)
